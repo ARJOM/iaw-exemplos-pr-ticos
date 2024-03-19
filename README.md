@@ -6,3 +6,5 @@ Neste repositório serão publicados os exemplos práticos de HTML vistos em sal
 - Aula 02 - Formulários, inputs, botões e tabelas
 - Aula 03 - Divs e tags semânticas (header, nav, main, article, section)
 - Aula 04 - Imgs, figure e figcaption
+- Aula 05 - Revisão de conteúdos
+- Aula 06 - Footer, tipos de links e códigos ([Lista de símbolos](https://fap.if.usp.br/~vvuolo/A%20-%20HOME%20-%20Fisica/simbolos.htm))
