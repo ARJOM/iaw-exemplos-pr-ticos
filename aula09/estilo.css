@@ -17,3 +17,7 @@ img {
     justify-content: center;
 }
 
+.alto {
+    /* grid-row: span 2; */
+    grid-column: span 2;
+}
