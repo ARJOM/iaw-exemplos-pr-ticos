@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color: white;
+    /* display: flex; */
+}
+
+nav{
+    display: flex;
+    height: fit-content;
+}
+
+nav>ul{
+    display: flex;
+    list-style-type: none;
+}
+
+main {
+    width: 80vw;
+}
+
+main>p {
+    font-weight: 700;
+    font-style: italic;    
+}
+
+img {
+    /* height: 40vh; */
+}
+
+article>p {
+    text-align: justify;
+}
+
+ul {
+    list-style-type: circle;
+}

@@ -1,0 +1,40 @@
+h1 {
+    color: red;
+    font-size: 50px;
+}
+
+h2 {
+    color: blueviolet;
+    font-size: 5vh;
+}
+
+table {
+    color: goldenrod;
+    
+}
+
+td, th {
+    border: solid 1px black;
+}
+
+thead {
+    color: green;
+    font-size: 1rem;
+}
+
+tbody{
+    font-size: 1em;
+}
+
+figcaption {
+    color: gray
+}
+
+label {
+    color: plum;
+}
+
+.espaco {
+    display: flex;
+    gap: 15px
+}
