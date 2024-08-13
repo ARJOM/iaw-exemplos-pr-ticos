@@ -1,0 +1,14 @@
+img{
+    height: 300px;
+}
+
+.lista-jogos{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    /* align-items: center; */
+    justify-content: center;
+
+    max-width: 100vw;
+    overflow-y: auto;
+}
