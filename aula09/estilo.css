@@ -1,0 +1,19 @@
+img {
+    height: 300px;
+}
+
+.lista-jogos {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.lista-jogos>div{
+    background-color: #e8e4d6;
+    padding: 10px;
+    margin: 10px;
+    
+    display: flex;
+    justify-content: center;
+}
+
