@@ -1,0 +1,35 @@
+div {
+    min-height: 30vh;
+    /* min-width: 6vw; */
+}
+
+.verde {
+    background-color: green;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.amarelo {
+    background-color: yellow;
+}
+
+.span3{
+    grid-row: span 3;
+}
+
+.span2 {
+    grid-row: span 2;
+}
+
+.row2 {
+    grid-column: span 2;
+}
+
+body {
+    background-color: darkblue;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
