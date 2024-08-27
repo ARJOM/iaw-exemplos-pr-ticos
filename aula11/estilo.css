@@ -96,3 +96,36 @@ footer>div:first-child{
 footer>div>ul>li {
     list-style: none;
 }
+
+
+@media only screen and (max-width: 600px) {
+    main {
+        /* min-height: 75vh; */
+        padding: 2rem;
+    }
+
+    .produtos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .produtos img {
+        min-width: 100%;
+        height: unset;
+    }
+
+    figcaption{
+        font-size: x-large;
+    }
+
+    header{
+        padding: 0 0.5rem;
+    }
+
+    nav>ul>li {
+        font-size: x-large;
+    }
+
+    footer>div>p{
+       text-align: center;
+    }
+}

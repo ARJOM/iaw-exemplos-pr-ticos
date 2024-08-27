@@ -12,4 +12,4 @@ Neste repositório serão publicados os exemplos práticos de HTML vistos em sal
 - Aula 08 - Seletores CSS e propriedades iniciais
 - Aula 09 - Display em CSS: Grid e Flex
 - Aula 10 - Atividade de fixação sobre displays
-- Aula 11 - Estudo de caso com CSS
+- Aula 11 - Estudo de caso com CSS (responsividade)
