@@ -13,3 +13,4 @@ Neste repositório serão publicados os exemplos práticos de HTML vistos em sal
 - Aula 09 - Display em CSS: Grid e Flex
 - Aula 10 - Atividade de fixação sobre displays
 - Aula 11 - Estudo de caso com CSS (responsividade)
+- Aula 12 - Pseudo-elementos e background image

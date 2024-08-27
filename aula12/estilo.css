@@ -1,0 +1,46 @@
+body {
+    background-image: url('https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=826&t=st=1724766527~exp=1724767127~hmac=45d26fd1554157bf7f2b7bc158d1c9024599944594a975ed5764741c4706a490');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+td::selection{
+    color: pink;
+    background-color: black;
+}
+
+tr>td:first-child{
+    text-align: center;
+}
+
+tbody>tr:nth-of-type(odd){
+    background-color: gray;
+}
+
+tbody>tr:nth-of-type(even){
+    background-color: black;
+    color: white;
+}
+
+a{
+    color: orange;
+    text-decoration: none;
+}
+
+a:visited {
+    color: gray;
+}
+
+a:hover{
+    color: purple;
+}
+
+a:visited:hover {
+    color: black;
+}
+
+a:active{
+    color: red;
+    text-decoration: underline;
+}
+
