@@ -11,6 +11,11 @@ let palavra = "Opa"
 let booleano = true
 let booleanoFalsy = false
 
+// Formatação de string
+let nome = "Ricart"
+let frase = `Olá ${nome}, como vai?`
+console.log(frase)
+
 // Exemplo de desvio condicional if
 let idade = 17
 if (idade >=80){
@@ -54,4 +59,34 @@ do {
 } while (a<5)
 
 
+// Arrays
 
+let array = []
+console.log(array)
+
+let arrayPreenchido = [1, 'String', true, NaN, '']
+console.log(arrayPreenchido)
+
+array.push("Palavra")
+array.push("Cantada")
+console.log(array)
+
+arrayPreenchido.pop()
+console.log(arrayPreenchido)
+
+console.log(arrayPreenchido[1])
+
+// Métodos de arrays
+for (let item of arrayPreenchido){
+    console.log(item)
+}
+
+arrayPreenchido.forEach(item => {
+    console.log(item, "!")
+})
+
+function showData (item){
+    console.log(item, "!!!")
+}
+
+arrayPreenchido.forEach(showData)
