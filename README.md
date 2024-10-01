@@ -14,3 +14,5 @@ Neste repositório serão publicados os exemplos práticos de HTML vistos em sal
 - Aula 10 - Atividade de fixação sobre displays
 - Aula 11 - Estudo de caso com CSS (responsividade)
 - Aula 12 - Pseudo-elementos e background image
+- Aula 13 - Fundamentos JS
+- Aula 14 - Exemplos práticos
