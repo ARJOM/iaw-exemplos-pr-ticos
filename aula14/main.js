@@ -1,16 +1,16 @@
 // Escreva um programa que receba um numero, um fator e o numero de elementos da PA que devem ser exibidos
-// let numero = 14
-// let fator = 3
-// let numeroElementos = 7
+let numero = 14
+let fator = 3
+let numeroElementos = 7
 
-// for (let i = 0; i<numeroElementos; i+=1){
-//     console.log(numero)
-//     numero += fator
-// }
-// // Operadores lógicos
-// let bool = true && true // and
-// bool = true || false  // or
-// bool = !false // not
+for (let i = 0; i<numeroElementos; i+=1){
+    console.log(numero)
+    numero += fator
+}
+// Operadores lógicos
+let bool = true && true // and
+bool = true || false  // or
+bool = !false // not
 
 // Modifique o programa acima para exibir apenas 
 // os números ímpares da PA que não sejam 

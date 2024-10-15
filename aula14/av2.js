@@ -7,7 +7,7 @@ let a = 25
 let b = 254
 
 for(let i = a; i <= b; i++){
-    let isPrime = true
+    let isPrime = i<=1 ? false : true
     for(let j = 2; j <= i/2 ; j++){
         if (i%j==0){
             isPrime = false
