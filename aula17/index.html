@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Tabela</title>
+    <link rel="stylesheet" href="estilo.css"/>
+</head>
+<body>
+    <h1>Produtos</h1>
+    <main>
+        <section>
+            <form id="registro">
+                <input id="productName" type="text" placeholder="Nome do Produto" />
+                <input id="productPrice" type="number" placeholder="Preço do Produto"/>
+                <input id="productQuantity" type="number" placeholder="Quantidade em Estoque"/>
+
+                <button type="submit">Salvar</button>
+            </form>
+            
+            <input id="pesquisa" type="text" placeholder="Pesquise por um produto"/>
+        </section>
+    
+        <table>
+            <thead>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+            </thead>
+            <tbody id="conteudo"><tr><td>Galochas</td><td>15</td><td>3</td>
+                
+                </tr></tbody>
+        </table>
+    </main>
+    <script src="main.js"></script>
+    
+</body>
+</html>
