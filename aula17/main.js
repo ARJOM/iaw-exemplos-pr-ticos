@@ -23,13 +23,19 @@ function criaLinha(nome, preco, quantidade){
 
 formularioRegistro.addEventListener("submit", (e)=>{
     e.preventDefault()
-    let nome = document.getElementById("productName").value
-    let preco = document.getElementById("productPrice").value
-    let quantidade = document.getElementById("productQuantity").value
+    let nome = document.getElementById("productName")
+    let valorNome = nome.value
+    let preco = document.getElementById("productPrice")
+    let valorPreco = preco.value
+    let quantidade = document.getElementById("productQuantity")
+    let valorQuantidade = quantidade.value
     
-    let linha = criaLinha(nome, preco, quantidade)
-    console.log(linha)
+    let linha = criaLinha(valorNome, valorPreco, valorQuantidade)
     conteudoTabela.appendChild(linha)
+
+    nome.value = ""
+    preco.value = ""
+    quantidade.value = ""
 
 })
 
