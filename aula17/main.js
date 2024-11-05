@@ -8,14 +8,14 @@ if (window.localStorage){
 }
 
 window.addEventListener("load", (() => {
-    produtos.forEach((produto) => {
-        let linha = criaLinha(produto.nome, produto.preco, produto.quantidade)
+    produtos.forEach((produto, idx) => {
+        let linha = criaLinha(produto.nome, produto.preco, produto.quantidade, idx)
         conteudoTabela.appendChild(linha)
     })
 }))
 
 
-function criaLinha(nome, preco, quantidade){
+function criaLinha(nome, preco, quantidade, indice){
     const linha = document.createElement("tr");
     const colunaNome = document.createElement("td");
     colunaNome.textContent = nome
@@ -23,17 +23,26 @@ function criaLinha(nome, preco, quantidade){
     colunaPreco.textContent = preco
     const colunaQuantidade = document.createElement("td");
     colunaQuantidade.textContent = quantidade
+    
+    const colunaAcoes = document.createElement("td");
+    const buttonEditar = document.createElement("button")
+    buttonEditar.textContent = "Editar"
+    buttonEditar.addEventListener("click", () => {
+        patchValues(indice)
+        setLocalStorage("produto", indice+1)
+    })
+    colunaAcoes.appendChild(buttonEditar)
 
     linha.appendChild(colunaNome)
     linha.appendChild(colunaPreco)
     linha.appendChild(colunaQuantidade)
+    linha.appendChild(colunaAcoes)
 
     return linha
 }
 
 
 formularioRegistro.addEventListener("submit", (e)=>{
-    e.preventDefault()
     let nome = document.getElementById("productName")
     let valorNome = nome.value
     let preco = document.getElementById("productPrice")
@@ -41,20 +50,22 @@ formularioRegistro.addEventListener("submit", (e)=>{
     let quantidade = document.getElementById("productQuantity")
     let valorQuantidade = quantidade.value
 
-    produtos.push({
+    const produtoObj = {
         nome: valorNome,
         preco: valorPreco,
         quantidade: valorQuantidade
-    })
-    setLocalStorage('produtos', produtos)
+    }
+
+    const indiceProduto = getLocalStorage("produto")
+
+    if (indiceProduto){
+        produtos[indiceProduto-1] = produtoObj
+        setLocalStorage("produto", null)
+    } else {
+        produtos.push(produtoObj)
+    }
     
-    let linha = criaLinha(valorNome, valorPreco, valorQuantidade)
-    conteudoTabela.appendChild(linha)
-
-    nome.value = ""
-    preco.value = ""
-    quantidade.value = ""
-
+    setLocalStorage('produtos', produtos)
 })
 
 inputBusca.addEventListener("input", () => {
@@ -68,6 +79,17 @@ inputBusca.addEventListener("input", () => {
             
         })
 })  
+
+function patchValues(indice){
+    const produto = produtos[indice]
+    
+    let nome = document.getElementById("productName")
+    nome.value = produto.nome
+    let preco = document.getElementById("productPrice")
+    preco.value = produto.preco
+    let quantidade = document.getElementById("productQuantity")
+    quantidade.value = produto.quantidade
+}
 
 function setLocalStorage(chave, valor){
     localStorage.setItem(chave, JSON.stringify(valor))
