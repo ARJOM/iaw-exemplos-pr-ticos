@@ -1,6 +1,7 @@
 const formularioRegistro = document.getElementById("registro")
 const inputBusca = document.getElementById("pesquisa")
 const conteudoTabela = document.getElementById("conteudo")
+// let parametros = new URL(window.location.href).searchParams
 
 let produtos = []
 if (window.localStorage){
@@ -8,6 +9,10 @@ if (window.localStorage){
 }
 
 window.addEventListener("load", (() => {
+    // const indiceProduto = parametros.get('q');
+    // if (indiceProduto){
+    //     patchValues(indiceProduto);
+    // }    
     produtos.forEach((produto, idx) => {
         let linha = criaLinha(produto.nome, produto.preco, produto.quantidade, idx)
         conteudoTabela.appendChild(linha)
@@ -30,6 +35,7 @@ function criaLinha(nome, preco, quantidade, indice){
     buttonEditar.addEventListener("click", () => {
         patchValues(indice)
         setLocalStorage("produto", indice+1)
+        // window.location.href = `?q=${indice+1}`
     })
     colunaAcoes.appendChild(buttonEditar)
 
@@ -64,6 +70,7 @@ formularioRegistro.addEventListener("submit", (e)=>{
     }
 
     const indiceProduto = getLocalStorage("produto")
+    //const indiceProduto = parametros.get('q')
 
     if (indiceProduto){
         produtos[indiceProduto-1] = produtoObj
@@ -89,6 +96,7 @@ inputBusca.addEventListener("input", () => {
 
 function patchValues(indice){
     const produto = produtos[indice]
+    //const produto = produtos[indice-1]
     
     let nome = document.getElementById("productName")
     nome.value = produto.nome
