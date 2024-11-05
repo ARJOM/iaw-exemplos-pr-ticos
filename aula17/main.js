@@ -33,6 +33,13 @@ function criaLinha(nome, preco, quantidade, indice){
     })
     colunaAcoes.appendChild(buttonEditar)
 
+    const buttonRemover = document.createElement("button")
+    buttonRemover.textContent = "Remover"
+    buttonRemover.addEventListener("click", () => {
+        removeProduct(indice)
+    })
+    colunaAcoes.appendChild(buttonRemover)
+
     linha.appendChild(colunaNome)
     linha.appendChild(colunaPreco)
     linha.appendChild(colunaQuantidade)
@@ -89,6 +96,15 @@ function patchValues(indice){
     preco.value = produto.preco
     let quantidade = document.getElementById("productQuantity")
     quantidade.value = produto.quantidade
+}
+
+function removeProduct(indice){
+    const confirm = window.confirm("Tem certeza que quer remover?")
+    if (confirm){
+        produtos = produtos.slice(0, indice).concat(produtos.slice(indice+1))
+        setLocalStorage("produtos", produtos)
+        window.location.reload()
+    }
 }
 
 function setLocalStorage(chave, valor){
